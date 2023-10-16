@@ -1,0 +1,65 @@
+tugas tanggal 16/10/2023
+
+1.  SELECT employee.full_name, jobs.name_job
+FROM employee 
+JOIN jobs ON employee.id_job = 
+Jobs.id_job;
+
+2. SELECT employee.,jobs.
+FROM employee
+left JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE
+employee.id_job IS NULL;
+
+3. SELECT employee.,jobs.
+FROM employee
+RIGHT JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE
+employee.id_job IS NULL;
+
+4. SELECT employee. * , jobs.*
+FROM employee
+JOIN jobs
+ON employee. id_job = jobs.id_job
+WHERE
+employee.gender = "M";
+
+5. SELECT employee.,jobs.
+FROM employee
+left JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE
+employee.place_birth="Bandung
+"OR employee.place_birth="Jakarta
+";
+
+6. SELECT employee.,jobs.
+FROM employee
+left JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE
+employee.date_birth ORDER BY employee.date_birth DESC;
+
+7. SELECT employee.,jobs.
+FROM employee
+left JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE
+employee.date_birth LIKE '%2000%';
+
+8. SELECT jobs.name_job, 
+COUNT(employee.id_emplo) AS 
+jumlah_pegawai
+FROM employee
+JOIN jobs ON employee.id_job = 
+jobs.id_job 
+GROUP BY jobs.name_job;
+
+9. SELECT employee.,jobs.
+FROM employee
+JOIN jobs
+ON employee.id_job = jobs.id_job
+WHERE
+employee.date_birth BETWEEN "1999-08-01" AND "2001-05-05" ORDER BY employee.date_birth ASC;
